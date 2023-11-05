@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Игра «Угадай число».</h1>
+      <div class="generate-num-wrapper">
+        <button class="generate-number">Сгенерировать</button>
+        <p class="generated-number">Число загадано</p>
+      </div>
+
+      <div class="success-message">Вы угадали число!!!</div>
+
+      <div class="content">
+        <div class="helps">
+          <!-- загаданное число больше или меньше -->
+          <p class="help-message-first"></p>
+          <!-- является ли число четным или нечетным -->
+          <p class="help-message-second"></p>
+          <!-- число за пределами диапазона -->
+          <p class="warning-message">
+            Загаданное число находится в диапазоне от 1 до 100.
+          </p>
+        </div>
+        <div class="input-wrapper">
+          <input
+            class="input"
+            type="number"
+            min="1"
+            max="1000"
+            placeholder="Введите число"
+          />
+          <button class="check-number">Проверить</button>
+        </div>
+        <p class="attempts">Кол-во попыток: <span>0</span></p>
+      </div>
+      <button class="reset-button">начать игру заново</button>
+    </div>
+    <script type="module" src="/public/main.js"></script>
+  </body>
+</html>

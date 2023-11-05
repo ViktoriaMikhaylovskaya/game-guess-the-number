@@ -1,0 +1,97 @@
+* {
+  color: #0c3b2e;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 400px;
+  background-color: #6d9773;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+  width: max-content;
+  background-color: #ffba00;
+  border: 1px solid #0c3b2e;
+  border-radius: 10px 100px / 120px;
+  padding: 10px;
+}
+
+button:disabled {
+  background-color: #bb8a52;
+  color: #ffba00;
+  filter: blur(1px);
+}
+
+.generate-num-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.generated-number {
+  display: none;
+  margin: 0;
+}
+
+.helps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.helps > p {
+  margin: 0;
+  font-size: 13px;
+  color: #ffba00;
+}
+
+.success-message {
+  display: none;
+  font-size: 25px;
+  color: #ffba00;
+  text-align: center;
+  margin: 10px 0;
+  border-bottom: 1px dashed;
+}
+
+.help-message-first {
+  display: none;
+}
+
+.help-message-second {
+  display: none;
+}
+
+.warning-message {
+  display: none;
+}
+
+.content {
+  display: none;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  max-width: 300px;
+}
+
+.input {
+  padding: 10px;
+  width: 100%;
+}
+
+.reset-button {
+  display: none;
+}
