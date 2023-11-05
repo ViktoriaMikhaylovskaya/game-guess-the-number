@@ -18,6 +18,7 @@ const showFirstHelpMessage = (currentNumber, rundomNumber) => {
 
     if (currentNumber === rundomNumber) {
         successMessageNode.style.display = 'block';
+        successMessageNode.textContent = `Вы угадали число ${rundomNumber}!!! Количество попыток ${allAttemptCount}.`;
         resetButton.style.display = 'block';
         contentNode.style.display = 'none';
     } else if (currentNumber > rundomNumber) {
