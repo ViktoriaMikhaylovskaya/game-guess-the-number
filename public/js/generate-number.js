@@ -77,9 +77,13 @@ const onClickResetResult = () => {
     attemptCount = 0;
     attemptsCountNode.textContent = `${attemptCount}`;
     generatedNumNode.style.display = 'none';
-    contentNode.style.display = 'none';
     successMessageNode.style.display = 'none';
     resetButton.style.display = 'none';
+
+    const messagesCollection = contentNode.querySelectorAll('p');
+    for (let message of messagesCollection) { 
+        message.style.display = 'none';
+    }
 }
 
 const initGame = () => { 
@@ -88,6 +92,14 @@ const initGame = () => {
     checkNumber.addEventListener('click', onClickCheckNumberButton);
 
     resetButton.addEventListener('click', onClickResetResult);
+
+    document.querySelector('.input').addEventListener('input', (e) => { 
+        if (e.target.value.length > 0) {
+            checkNumber.disabled = false;
+        } else { 
+            checkNumber.disabled = true;
+        }
+    });
 }
 
 export default initGame;
