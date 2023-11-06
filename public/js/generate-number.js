@@ -76,7 +76,8 @@ const onClickResetResult = () => {
     generateNumberButton.disabled = false;
     document.querySelector('.input').value = '';
     attemptCount = 0;
-    attemptsCountNode.textContent = `${attemptCount}`;
+    allAttemptCount = 0;
+    attemptsCountNode.textContent = `${allAttemptCount}`;
     generatedNumNode.style.display = 'none';
     successMessageNode.style.display = 'none';
     resetButton.style.display = 'none';

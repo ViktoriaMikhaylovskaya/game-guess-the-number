@@ -92,6 +92,10 @@ button:disabled {
   width: 100%;
 }
 
+.attempts {
+  margin-top: 10px;
+}
+
 .reset-button {
   display: none;
 }
